@@ -4,8 +4,8 @@ require_once('config.php');
 
 $dir = DIR_IMAGE . 'catalog/';
 
-	/*  Изпращане на POST заявка към
-	 *  сървъра за компресия на NitroSmush
+	/* Send a POST request to
+	* NitroSmush compression server
 	*/
 
 	function _file_api($args) {
@@ -65,7 +65,7 @@ $dir = DIR_IMAGE . 'catalog/';
 		
 	}
 	
-	/* Извличане на MIME тип на текущото изображение */
+	/* Retrieve the MIME type of the current image */
 	
 	function _get_mime($file) {
         if (preg_match('~\.gif$~i', $file)) {
@@ -80,7 +80,7 @@ $dir = DIR_IMAGE . 'catalog/';
     }
 	
 	
-	/* Начало на сканирането на директорията и обработване на изображенията */
+	/* Start scanning the directory and processing the images */
 		
 	
 	$files = glob($dir . '*.{jpeg,gif,png}', GLOB_BRACE);
